@@ -21,6 +21,8 @@ namespace ApiOAuthEmpleados.Controllers
         [Authorize]
         public async Task<ActionResult<List<Empleado>>> GetEmpleados()
         {
+            //USERDATA
+            //HttpContext.User.FindFirst("USERDATA")
             return await this.repo.GetEmpleadosAsync();
         }
 
